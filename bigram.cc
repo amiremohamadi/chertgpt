@@ -45,7 +45,7 @@ std::vector<float> forward(bigram_t &b, int pos) {
 void train(bigram_t &b, std::vector<int>& data, int iter, float lr) {
     int vocab_size = b.vocab_size;
     float beta1 = 0.9f, beta2 = 0.999f, epsilon = 1e-8f, weight_decay = 0.01f;
-    
+
     for (int i = 0; i < iter; i++) {
         std::vector<std::vector<float>> grads(vocab_size,
                 std::vector<float>(vocab_size, 0.0f));
